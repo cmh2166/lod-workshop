@@ -1,0 +1,39 @@
+@prefix a: <http://etherpad.lobid.org/p/swib-16-ws-a#> .
+@prefix b: <http://etherpad.lobid.org/p/swib-16-ws-b#> .
+@prefix c: <http://etherpad.lobid.org/p/swib-16-ws-c#> .
+@prefix d: <http://etherpad.lobid.org/p/swib-16-ws-d#> .
+@prefix e: <http://etherpad.lobid.org/p/swib-16-ws-e#> .
+@prefix f: <http://etherpad.lobid.org/p/swib-16-ws-f#> .
+@prefix g: <http://etherpad.lobid.org/p/swib-16-ws-g#> .
+@prefix z: <http://etherpad.lobid.org/p/swib-16-ws-z#> .
+
+@prefix schema: <http://schema.org/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> dcterms:creator z:ch .
+<> dcterms:creator z:jh .
+<> dcterms:creator z:ub .
+
+z:ub schema:name "Uldis" .
+z:ub schema:location dbr:Riga .
+z:ub schema:knows z:ch .
+z:ub schema:knows a:jh .
+z:ub foaf:interest dbr:Music .
+z:ub foaf:interest dbr:Semantic_Web .
+
+z:ch schema:name "Christina" .
+z:ch schema:location <http://www.wikidata.org/entity/Q217346> .
+z:ch schema:knows z:ub .
+z:ch schema:knows z:jh .
+z:ch foaf:interest dbr:Semantic_Web .
+z:ch foaf:interest <http://www.wikidata.org/entity/Q28865> .
+
+z:jh schema:name "Jana" .
+z:jh schema:knows z:ub .
+z:jh schema:knows z:ch .
+z:jh schema:location dbr:Frankfurt_am_Main .
+z:jh foaf:interest dbr:Music .
+z:jh foaf:interest dbr:Semantic_Web .
+
