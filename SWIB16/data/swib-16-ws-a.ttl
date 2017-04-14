@@ -1,0 +1,44 @@
+@prefix a:<http://etherpad.lobid.org/p/swib-16-ws-a#> .
+@prefix c:<http://etherpad.lobid.org/p/swib16-ws-c#> .
+@prefix b:<http://etherpad.lobid.org/p/swib16-ws-b#> .
+@prefix e:<http://etherpad.lobid.org/p/swib16-ws-e#> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix map: <https://www.openstreetmap.org/search?query=> .
+@prefix wkd: <https://www.wikidata.org/wiki/> .
+
+a:lr schema:name "Laurence" .
+a:lr schema:location dbr:Lyon .
+a:lr schema:location map:LyonFrance .
+a:lr schema:location wkd:Q456 .
+a:lr schema:knows a:gc .
+a:lr schema:knows a:pl .
+a:lr schema:knows a:fb .
+a:lr schema:knows c:sp .
+
+a:gc schema:name "Gladys" .
+a:gc schema:location dbr:Grenoble .
+a:gc schema:knows a:lr .
+a:gc schema:knows a:pl .
+a:gc schema:knows a:fb .
+a:gc schema:knows c:ls .
+a:gc schema:knows e:bb .
+a:gc schema:knows e:da .
+a:gc schema:knows e:lh .
+a:gc schema:location map:Grenoble .
+a:lr schema:location wkd:Q1289 .
+
+a:pl schema:name "Petra" .
+a:pl schema:location dbr:Munich .
+a:pl schema:knows a:lr .
+a:pl schema:knows a:gc .
+a:pl schema:knows a:fb .
+a:pl schema:knows b:ag .
+
+a:fb schema:firstname "Fatima".
+a:fb schema:lastname "Bazzal".
+a:fb schema:location dbr:Baalbek .
+a:fb schema:knows a:gc .
+a:fb schema:knows a:pl .
+a:fb schema:knows e:ml .

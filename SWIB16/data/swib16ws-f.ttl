@@ -1,0 +1,28 @@
+@prefix f: <http://etherpad.lobid.org/p/swib16-ws-f#> .
+@prefix schema: <http://schema.org/> .
+@prefix g: <http://etherpad.lobid.org/p/swib16-ws-g#> .
+@prefix c: <http://etherpad.lobid.org/p/swib-16-ws-c#> .
+@prefix e: <http://etherpad.lobid.org/p/swib-16-ws-e#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+f:hs schema:name "Helena" .
+f:hs schema:location dbr:Stockholm .
+f:hs schema:knows f:sh .
+f:hs schema:knows f:kp .
+f:hs schema:knows e:da .
+f:hs schema:knows e:ev .
+
+f:sh schema:name "Steve" .
+f:sh schema:location dbr:Doha .
+f:sh schema:knows f:hs .
+f:sh schema:knows f:kp .
+f:sh schema:knows g:ae .
+
+f:kp schema:name "Karin" .
+f:kp schema:location dbr:Stockholm .
+f:kp schema:knows f:hs .
+f:kp schema:knows f:sh .
+f:kp schema:knows c:va .
+f:kp schema:knows g:js .
+
+

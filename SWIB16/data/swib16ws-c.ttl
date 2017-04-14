@@ -1,0 +1,49 @@
+@prefix c: <http://etherpad.lobid.org/p/swib16-ws-c#> .
+@prefix f:  <http://etherpad.lobid.org/p/swib16-ws-f#> .
+@prefix a:  <http://etherpad.lobid.org/p/swib-16-ws-a#> .
+@prefix b:  <http://etherpad.lobid.org/p/swib16-ws-b#> .
+@prefix e:  <http://etherpad.lobid.org/p/swib16-ws-e#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix wikidata: <http://wikidata.org/entity/> .
+@prefix schema: <http://schema.org/> .
+
+c:rr schema:name "Renee" .
+c:rr schema:location "Calgary"  .
+c:rr schema:knows c:sp .
+c:rr schema:knows c:va .
+c:rr schema:knows c:ns .
+c:rr schema:knows b:oj .
+b:oj schema:knows c:rr .
+c:rr schema:location wikidata:Q36312 .
+
+c:sp schema:name "Stanko" .
+c:sp schema:location "Maribor" .
+c:sp schema:knows c:rr .
+c:sp schema:knows c:va .
+c:sp schema:knows c:ns .
+c:sp schema:knows e:lh .
+b:oj schema:knows c:sp .
+c:sp schema:knows b:oj .
+a:lr schema:knows c:sp .
+c:sp schema:knows a:lr .
+c:sp schema:knows e:lh .
+e:ih schema:knows c:sp .
+c:sp schema:location wikidata:Q1010 .
+
+
+c:va schema:name "Volker" .
+c:va schema:location "Osnabrueck" .
+c:va schema:knows c:rr .
+c:va schema:knows c:sp .
+c:va schema:knows c:ns .
+c:va schema:knows f:kp .
+c:va schema:location wikidata:Q2916 .
+
+f:kp schema:knows c:va .
+
+c:ns schema:name "Natalie" .
+c:ns schema:location "Kerpen" .
+c:ns schema:knows c:rr .
+c:ns schema:knows c:sp .
+c:ns schema:knows c:va .
+

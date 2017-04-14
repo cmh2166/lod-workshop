@@ -6,6 +6,8 @@ import os
 
 def getExtURIs(newGraph):
     """Get select statements from named graphs of external URIs used."""
+    predsWeWant = ["http://dbpedia.org/ontology/country",
+                   "http://dbpedia.org/ontology/populationTotal"]
     extURIs = set()
     for stmt in newGraph.objects():
         if type(stmt) is rdflib.term.URIRef and 'etherpad' not in stmt:
@@ -14,8 +16,9 @@ def getExtURIs(newGraph):
     for extURI in extURIs:
         try:
             for extstmt in rdflib.Graph().parse(extURI):
-                print(extstmt[1])
-                # newGraph.parse(extURI)
+                if extstmt[1].toPython() in predsWeWant:
+                    print(extstmt)
+                    newGraph.add(extstmt)
         except:
             sys.stdout.write("Error with " + extURI.toPython())
             pass
@@ -29,8 +32,9 @@ def main():
     for origGraph in os.listdir(dataDir):
         try:
             newGraph.parse(dataDir + '/' + origGraph, format="turtle")
-        except Exception:
+        except Exception as e:
             sys.stdout.write("Unexpected error with file: " + origGraph)
+            sys.stdout.write(str(e))
             exit()
     newGraph = getExtURIs(newGraph)
     newGraph.serialize('swib_output.ttl', format='turtle')

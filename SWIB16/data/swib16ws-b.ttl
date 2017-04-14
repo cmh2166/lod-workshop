@@ -1,0 +1,43 @@
+@prefix a: <http://etherpad.lobid.org/p/swib-16-ws-a#>.
+@prefix b: <http://etherpad.lobid.org/p/swib16-ws-b#>.
+@prefix c: <http://etherpad.lobid.org/p/swib16-ws-c#>.
+@prefix e: <http://etherpad.lobid.org/p/swib16-ws-e#>.
+
+@prefix schema: <http://schema.org/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+b:oj schema:name "Olaf".
+b:oj schema:location dbr:The_Hague .
+b:ag schema:name "Astrid".
+b:ag schema:location "Bonn".
+b:ag schema:knows b:oj.
+b:ag schema:knows b:ml.
+b:ag schema:knows e:bb.
+b:ag schema:knows a:pl .
+b:ag schema:knows c:ns .
+b:ag schema:location dbr:Bonn.
+b:ml schema:name "Miklós".
+b:ml schema:location dbr:Budapest.
+b:ml schema:knows b:oj.
+b:ml schema:knows b:ag.
+b:ml schema:knows e:be.
+b:ml schema:knows c:ns.
+c:ns schema:knows b:ml.
+b:ml schema:knows e:ml.
+
+c:rr schema:knows b:oj.
+b:oj schema:knows e:sp .
+b:oj schema:knows b:ag.
+b:oj schema:knows b:ml.
+
+e:ml schema:name "Eva".
+e:ml schema:location "Frankfurt".
+
+b:grpB rdf:type b:Group .
+b:grpBdoc <http://eprints.org/ontology/hasFile> <http://etherpad.lobid.org/p/swib16-ws-b> .
+b:grpBdoc dcterms:creator b:grpB .
+

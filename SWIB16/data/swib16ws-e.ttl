@@ -1,0 +1,69 @@
+@prefix a: <http://etherpad.lobid.org/p/swib-16-ws-a#> .
+@prefix e: <http://etherpad.lobid.org/p/swib-16-ws-e#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix geo: <http://www.geonames.org/> .
+@prefix f: <http://etherpad.lobid.org/p/swib-16-ws-f#> .
+@prefix b: <http://etherpad.lobid.org/p/swib16-ws-b#> .
+@prefix c: <http://etherpad.lobid.org/p/swib-16-ws-c#> .
+
+e:ml schema:name "Michael" .
+e:ml schema:location geo:5327684 .
+e:ml schema:knows e:lh .
+e:ml schema:knows e:ev .
+e:ml schema:knows e:bb .
+e:ml schema:knows e:da .
+e:ml schema:knows a:fb .
+
+e:da schema:name "Dimitra" .
+e:da schema:location dbr:Rotterdam .
+e:da schema:knows e:ml .
+e:da schema:knows e:bb .
+e:da schema:knows e:ev .
+e:da schema:knows e:lh .
+e:da schema:knows f:hs .
+e:da schema:knows a:gc .
+
+e:bb schema:name "Barbara" .
+e:bb schema:location "Goettingen" .
+e:bb schema:knows e:da .
+e:bb schema:knows e:ml .
+e:bb schema:knows e:ev .
+e:bb schema:knows e:lh .
+e:bb schema:knows b:ag .
+e:bb schema:knows a:gc .
+
+e:ev schema:name "Eva".
+e:ev schema:location "Frankfurt".
+e:ev schema:knows e:da .
+e:ev schema:knows e:ml .
+e:ev schema:knows e:bb .
+e:ev schema:knows e:lh .
+e:ev schema:knows f:sh .
+e:ev schema:location "https://en.wikipedia.org/wiki/Frankfurt" .
+
+e:lh schema:name "Laura".
+e:lh schema:location "Bonn".
+e:lh schema:location "https://de.wikipedia.org/wiki/Bonn" .
+e:lh schema:knows e:bb.
+e:lh schema:knows e:ml.
+e:lh schema:knows e:da .
+e:lh schema:knows e:ml .
+e:lh schema:knows c:va .
+e:lh schema:knows a:gc .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+@prefix f: <http://etherpad.lobid.org/p/swib-16-ws-f#> .
+@prefix schema: <http://scema.org>.
+
+f:kp schema:name "karin".
+f:kp schema:location "stockholm".
+
+
